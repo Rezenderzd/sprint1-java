@@ -1,6 +1,6 @@
 package br.com.fiap.model;
 
-public class Validacoes {
+public class ValidacoesTrechoRodovia {
 
     public boolean validarNome(String nome){
         if(nome.isEmpty()){

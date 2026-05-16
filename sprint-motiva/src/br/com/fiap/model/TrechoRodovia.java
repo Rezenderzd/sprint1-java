@@ -5,10 +5,10 @@ public class TrechoRodovia {
     private int quilometroInicial;
     private int quilometroFinal;
     private double nivelVegetacaoEmCm;
-    private Validacoes validacoes  = new Validacoes();
+    private ValidacoesTrechoRodovia validacoesTrechoRodovia = new ValidacoesTrechoRodovia();
 
     public TrechoRodovia(String nomeTrecho, int quilometroInicial, int quilometroFinal, double nivelVegetacaoEmCm){
-        if (!validacoes.validacaoGeral(nomeTrecho, quilometroInicial, quilometroFinal, nivelVegetacaoEmCm)){
+        if (!validacoesTrechoRodovia.validacaoGeral(nomeTrecho, quilometroInicial, quilometroFinal, nivelVegetacaoEmCm)){
             System.out.println("Não foi possível criar o Trecho, os dados não são válidos");
             return;
         }
@@ -16,7 +16,7 @@ public class TrechoRodovia {
         this.quilometroInicial = quilometroInicial;
         this.quilometroFinal = quilometroFinal;
         this.setNivelVegetacaoEmCm(nivelVegetacaoEmCm);
-        if(validacoes.validarNome(getNomeTrecho())){
+        if(validacoesTrechoRodovia.validarNome(getNomeTrecho())){
             System.out.println("Trecho criado com sucesso!");
         }
     }
